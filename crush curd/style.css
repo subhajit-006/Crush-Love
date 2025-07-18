@@ -1,0 +1,83 @@
+body {
+  background: #fff0f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 30px;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+video {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.question {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 25px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-btn {
+  background-color: #e91e63;
+  color: white;
+}
+
+.no-btn {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+/* Optional: Heart Animation Loader */
+.cssload-main {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cssload-heart, .cssload-square {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 2px;
+  background-color: #e91e63;
+  transform: rotate(45deg);
+  animation: pulse 1s infinite;
+}
+
+.cssload-shadow {
+  width: 90px;
+  height: 10px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  margin: 10px auto 0;
+  animation: shadow-pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1) rotate(45deg); }
+  50% { transform: scale(1.3) rotate(45deg); }
+}
+
+@keyframes shadow-pulse {
+  0%, 100% { transform: scaleX(1); opacity: 0.3; }
+  50% { transform: scaleX(1.3); opacity: 0.6; }
+}

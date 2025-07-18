@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Love Question</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="question-container container">
+  <img class="local-gif" src="tenor.gif" alt="Cute Animation">
+  <h2 class="question">Do you love me? 🥺</h2>
+  <div class="button-container">
+    <button class="yes-btn btn js-yes-btn">Yes ❤️</button>
+    <button class="no-btn btn js-no-btn">No 💔</button>
+  </div>
+</div>
+
+<div class="result-container container" style="display: none;">
+  <img class="gif-result" src="hearts-hugs.gif" alt="Happy Reaction">
+  <h2>I knew it! 😍❤️</h2>
+</div>
+
+<!-- CSS Heart Animation Loader -->
+<div class="cssload-main">
+  <span class="cssload-heart"></span>
+  <span class="cssload-heart"></span>
+  <span class="cssload-square"></span>
+  <div class="cssload-shadow"></div>
+</div>
+
+<!-- 🔊 Background Music -->
+<audio id="bg-music" src="love-song.mp3" autoplay loop></audio>
+
+<script>
+  const audio = document.getElementById('bg-music');
+  audio.volume = 1;
+
+
+  setInterval(() => {
+    if (audio.paused) {
+      audio.play();
+    }
+  }, 2000);
+</script>
+
+
+<script>
+  const yesBtn = document.querySelector('.js-yes-btn');
+  const noBtn = document.querySelector('.js-no-btn');
+  const questionContainer = document.querySelector('.question-container');
+  const resultContainer = document.querySelector('.result-container');
+
+  yesBtn.addEventListener('click', () => {
+    questionContainer.style.display = 'none';
+    resultContainer.style.display = 'block';
+  });
+
+  noBtn.addEventListener('mouseover', () => {
+    noBtn.style.position = 'absolute';
+    noBtn.style.top = Math.random() * 80 + '%';
+    noBtn.style.left = Math.random() * 80 + '%';
+  });
+</script>
+
+</body>
+</html>
